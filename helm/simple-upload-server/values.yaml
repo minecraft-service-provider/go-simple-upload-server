@@ -1,0 +1,8 @@
+storage:
+  capacity: 10Gi
+server:
+  uploadLimit: "104857600"
+  token: c68rutn6bhubhiqwertjun
+
+image: localhost:32000/mcsp/simple-upload-server:v1.3
+imagePullPolicy: Always

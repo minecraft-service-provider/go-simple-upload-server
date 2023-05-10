@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-upload-server
+  labels:
+    app: simple-upload-server
+spec:
+  containers:
+  - name: server
+    image: {{ .Values.image }}
+    imagePullPolicy: {{ .Values.imagePullPolicy }}
+    args:
+    - -upload_limit={{ .Values.server.uploadLimit }}
+    - -token={{ .Values.server.token }}
+    - /var/root
+    volumeMounts:
+    - mountPath: /var/root
+      name: file-store
+    ports:
+    - name: http-server
+      containerPort: 25478
+  volumes:
+  - name: file-store
+    persistentVolumeClaim:
+      claimName: file-store
