@@ -1,5 +1,6 @@
 storage:
-  capacity: 10Gi
+  capacity: 100Gi
+  className: kubernetes-vault
 server:
   uploadLimit: "104857600"
   token: c68rutn6bhubhiqwertjun

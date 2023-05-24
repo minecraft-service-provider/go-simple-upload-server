@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: file-store
 spec:
+  storageClassName: {{ .Values.storage.className }}
   accessModes: 
   - ReadWriteOnce
   resources: 
