@@ -2,7 +2,7 @@ storage:
   capacity: 100Gi
   className: kubernetes-vault
 server:
-  uploadLimit: "104857600"
+  uploadLimit: "10485760000"
   token: c68rutn6bhubhiqwertjun
 
 image: localhost:32000/mcsp/simple-upload-server:v1.3
